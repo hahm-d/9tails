@@ -39,3 +39,28 @@ controls.forEach(control => {
         int = setInterval(changeSlides, 4000);
     });
 });
+
+
+$(document).on("click", '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+
+
+// merch isotope and filter
+$(window).on('load', function () {
+    var merchIsotope = $('.merch-container').isotope({
+        itemSelector: '.merch-item',
+        layoutMode: 'fitRows'
+    });
+
+    $('#merch-flters li').on('click', function () {
+        $("#merch-flters li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+
+        merchIsotope.isotope({
+            filter: $(this).data('filter')
+        });
+        aos_init();
+    });
+});

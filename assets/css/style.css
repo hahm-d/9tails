@@ -275,7 +275,7 @@ body {
 --------------------------------------------------------------*/
 .menu {
   padding-top: 30px;
-  padding-left: 90px;
+  padding-left: 100px;
   margin: auto;
   height: auto;
 	width: 90vw;
@@ -441,7 +441,11 @@ section {
   margin-bottom: 0;
 }
 
-
+@media (max-width: 767px) {
+  .merch {
+    margin: 60px 130px;
+  }
+}
 
 /*--------------------------------------------------------------
 # LOCATION
@@ -450,7 +454,6 @@ section {
 	display: flex;
 	align-items: center;
   justify-content: center;
-  padding-top: 50px;
   margin: auto;
 	overflow: hidden;
 	position: relative;
@@ -460,7 +463,7 @@ section {
 
 @media (max-width: 767px) {
   .map {
-    margin: 60px 130px;
+    margin: 20px 130px;
     height: 60vh;
 	  width: 70vw;
   }
@@ -481,3 +484,97 @@ section {
 /*--------------------------------------------------------------
 # FOOTER
 --------------------------------------------------------------*/
+.footer {
+  background-color: #FFFFFF;
+  border-top: 1px solid #DDDDDD;
+}
+
+.footer nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+.footer nav > ul a:not(.btn) {
+  color: #8b8b8b;
+  display: block;
+}
+.footer nav > ul a:not(.btn):hover, .footer nav > ul a:not(.btn):focus {
+  color: #979696;
+}
+.footer .social-area > a:not(.btn) {
+  color: #777777;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 5px;
+  font-weight: normal;
+  text-align: center;
+}
+.footer .social-area > a:not(.btn):hover, .footer .social-area > a:not(.btn):focus {
+  color: #777777;
+}
+.footer .copyright {
+  color: #fffbfb;
+  padding: 10px 15px;
+  margin: 15px 3px;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+.footer .btn-social {
+  color: #fffbfb;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.footer hr {
+  border-color: #DDDDDD;
+}
+
+.footer:not(.footer-big) nav > ul li {
+  margin-left: 20px;
+  float: left;
+}
+.footer:not(.footer-big) nav > ul a {
+  padding: 5px 0px;
+  margin: 10px 10px 10px 0px;
+}
+.footer-color-gray {
+  background-color: #F5F5F5;
+}
+
+.footer-color-black,
+.footer-transparent {
+  background-color: rgba(185, 184, 184, 0.97);
+  color: #DDDDDD;
+}
+.footer-color-black nav > ul a,
+.footer-transparent nav > ul a {
+  color: #FFFFFF;
+}
+.footer-color-black nav > ul a:hover, .footer-color-black nav > ul a:focus,
+.footer-transparent nav > ul a:hover,
+.footer-transparent nav > ul a:focus {
+  color: #777777;
+}
+.footer-color-black .social-area > a:not(.btn),
+.footer-transparent .social-area > a:not(.btn) {
+  color: #FFFFFF;
+}
+.footer-color-black .social-area > a:not(.btn):hover, .footer-color-black .social-area > a:not(.btn):focus,
+.footer-transparent .social-area > a:not(.btn):hover,
+.footer-transparent .social-area > a:not(.btn):focus {
+  color: #777777;
+}
+.footer-color-black .btn-social,
+.footer-transparent .btn-social {
+  color: #FFFFFF;
+}
+.footer-color-black hr,
+.footer-transparent hr {
+  border-color: #444444;
+}
+.footer-color-black .title,
+.footer-transparent .title {
+  color: #DDDDDD;
+}

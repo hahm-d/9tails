@@ -178,7 +178,7 @@ body {
 .nav-links a {
     color: rgb(248, 244, 244);
     text-decoration: none;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     font-weight: bold;
     font-size: 12px;
 }
@@ -187,11 +187,15 @@ body {
     display: none;
 }
 
+.phone-only-logo {
+    display: none;
+}
+
 .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: rgb(226, 226, 226);
-    margin: 5px;
+    width: 30px;
+    height: 4px;
+    background-color: rgb(156, 156, 156);
+    margin: 7px 9px;
     transition: all 0.3s ease;
 }
 
@@ -207,14 +211,13 @@ body {
     .nav-links {
         position: absolute;
         left: 0px;
-        height: 100vh;
+        height: 28vh;
         top: 0;
         background-color: #b9b9b9;
-        display: flex;
         flex-direction: column;
-        align-items: right;
-        width: 25%;
-        transform: translateX(-100%);
+        align-items: center;
+        width: 100%;
+        transform: translateY(-100%);
         transition: transform 0.5s ease-in;
         display: flex;
     }
@@ -227,6 +230,15 @@ body {
         display: block;
         cursor: pointer;
     }
+
+    .phone-only-logo {
+        display: flex;
+        width: 50%;
+        position:static;
+        margin: auto;
+
+    }
+
 }
 
 .nav-active {
@@ -245,7 +257,7 @@ body {
 }
 
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 10px);
 }
 
 .toggle .line2 {
@@ -253,7 +265,7 @@ body {
 }
 
 .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -10px);
 }
 
 
@@ -294,7 +306,7 @@ body {
 .slider-container::after {
 	background-color: #000;
 	content: '';
-	position: absolute;
+	position: relative;
 	opacity: 0.3;
 	top: 0;
 	left: 0;
@@ -357,23 +369,31 @@ body {
 	transform: scale(1.2);
 }
 
-@media (max-width: 767px) {
+
+@media screen and (max-width: 768px) {
   .slider-container {
-    margin: 55px 130px;
-    height: 60vh;
+    margin: auto;
+    height: 50vh;
 	  width: 70vw;
   }
 }
-
 /*--------------------------------------------------------------
 # MENU
 --------------------------------------------------------------*/
 .menu {
   padding-top: 30px;
-  padding-left: 100px;
+  padding-left: 150px;
   margin: auto;
   height: auto;
 	width: 90vw;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    margin: auto;
+    height: auto;
+	  width: 80vw;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -405,10 +425,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.merch #merch-flters li:hover, .merch #merch-flters li.filter-active {
-  color: #fff;
-  background: #009970;
-}
 
 .merch #merch-flters li:last-child {
   margin-right: 0;
@@ -568,9 +584,17 @@ section {
 # CONTACT
 --------------------------------------------------------------*/
 
-@media (max-width: 767px) {
+@media (max-width: 990px) {
   .cd-content {
     margin: 80px 130px;
+    height: 60vh;
+	  width: 70vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .cd-content {
+    margin: 10px 50px;
     height: 60vh;
 	  width: 70vw;
   }

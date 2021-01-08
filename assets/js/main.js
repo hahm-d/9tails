@@ -9,9 +9,10 @@ const controls = document.querySelectorAll('.control');
 let activeSlide = 0;
 let prevActive = 0;
 
-changeSlides();
+if (slides.length > 1){
+    changeSlides();
+}
 let int = setInterval(changeSlides, 4000);
-
 function changeSlides() {
     slides[prevActive].classList.remove('active');
     controls[prevActive].classList.remove('active');
@@ -25,7 +26,6 @@ function changeSlides() {
         activeSlide = 0;
     }
 
-    console.log(prevActive, activeSlide);
 }
 
 controls.forEach(control => {
@@ -46,26 +46,6 @@ $(document).on("click", '[data-toggle="lightbox"]', function (event) {
     $(this).ekkoLightbox();
 });
 
-
-// merch isotope and filter
-$(window).on('load', function () {
-    var merchIsotope = $('.merch-container').isotope({
-        itemSelector: '.merch-item',
-        layoutMode: 'fitRows'
-    });
-
-    $('#merch-flters li').on('click', function () {
-        $("#merch-flters li").removeClass('filter-active');
-        $(this).addClass('filter-active');
-
-        merchIsotope.isotope({
-            filter: $(this).data('filter')
-        });
-        aos_init();
-    });
-});
-
-
 function navSlide() {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
@@ -74,7 +54,6 @@ function navSlide() {
     burger.addEventListener("click", () => {
         //Toggle Nav
         nav.classList.toggle("nav-active");
-
         //Animate Links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {

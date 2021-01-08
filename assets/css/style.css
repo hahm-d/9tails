@@ -191,6 +191,16 @@ body {
     display: none;
 }
 
+.banner-logo {
+  width: 200px;
+  height: 20%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .burger div {
     width: 30px;
     height: 4px;
@@ -202,6 +212,10 @@ body {
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
+    }
+
+    .banner-logo{
+      display: none;
     }
 
     .cd-side-navigation {
@@ -290,8 +304,8 @@ body {
   margin: auto;
 	overflow: hidden;
 	position: relative;
-	height: 80vh;
-	width: 60vw;
+	height: 60vh;
+	width: 70vw;
 }
 
 .slider-container h1 {
@@ -382,17 +396,17 @@ body {
 --------------------------------------------------------------*/
 .menu {
   padding-top: 30px;
-  padding-left: 150px;
+  padding-left: 100px;
   margin: auto;
   height: auto;
-	width: 90vw;
+	width: 100%;
 }
 
 @media screen and (max-width: 768px) {
   .menu {
+    padding: 0px;
     margin: auto;
     height: auto;
-	  width: 80vw;
   }
 }
 
@@ -552,9 +566,10 @@ section {
   margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
-  .merch {
-    margin: 60px 130px;
+
+@media screen and (max-width: 768px) {
+    .merch {
+    margin: 60px 10px;
   }
 }
 
@@ -574,7 +589,7 @@ section {
 
 @media (max-width: 767px) {
   .map {
-    margin: 0px 130px;
+    margin: auto;
     height: 60vh;
 	  width: 70vw;
   }
@@ -594,7 +609,7 @@ section {
 
 @media (max-width: 450px) {
   .cd-content {
-    margin: 10px 50px;
+    margin: auto;
     height: 60vh;
 	  width: 70vw;
   }

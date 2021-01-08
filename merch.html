@@ -12,9 +12,6 @@
     <!-- Favicons -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Psoppins%26display=swap" rel="stylesheet">
-
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -25,46 +22,60 @@
 </head>
 
 <body>
-    <!-- ======= Nav ======= -->
-    <nav class="cd-side-navigation">
-        <ul>
-            <li><img src="assets/img/favicon.png" class="banner-image"></li>
+<!-- ======= Nav ======= -->
+<nav class="cd-side-navigation">
+    <ul>
+        <li>
+            <a href="index.html" class='' data-menu="index">
+                <div><i class="bx bx-coffee"></i></div>
+                Home
+            </a>
+        </li>
 
+        <li>
+            <a href="menu.html" class='' data-menu="index">
+                <div><i class="bx bx-coffee-togo"></i></div>
+                Menu
+            </a>
+        </li>
 
-            <li>
-                <a href="index.html" class='' data-menu-index>
-                    <div><i class="bx bx-coffee"></i></div>
-                    Home
-                </a>
-            </li>
+        <li>
+            <a href="merch.html" class='selected' data-menu="index">
+                <div><i class="bx bx-bone"></i></div>
+                Merch
+            </a>
+        </li>
+        <li>
+            <a href="location.html" class='' data-menu="index">
+                <div><i class="bx bx-pin"></i></div>
+                Location
+            </a>
+        </li>
+        <li>
+            <a href="contact.html" class='' data-menu="index">
+                <div><i class="bx bx-envelope"></i></div>
+                Contact
+            </a>
+        </li>
+    </ul>
+</nav>
 
-            <li>
-                <a href="menu.html" class='' data-menu="index">
-                    <div><i class="bx bx-coffee-togo"></i></div>
-                    Menu
-                </a>
-            </li>
+<!-- Lazy burger nav for phone -->
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="merch.html">MERCH</a></li>
+        <li><a href="location.html">LOCATION</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
 
-            <li>
-                <a href="merch.html" class='selected' data-menu="index">
-                    <div><i class="bx bx-bone"></i></div>
-                    Merch
-                </a>
-            </li>
-            <li>
-                <a href="location.html" class='' data-menu="index">
-                    <div><i class="bx bx-pin"></i></div>
-                    Location
-                </a>
-            </li>
-            <li>
-                <a href="contact.html" class='' data-menu="index">
-                    <div><i class="bx bx-envelope"></i></div>
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <img class="phone-only-logo" src="assets/img/15.jpg">
+
 
     <!-- merch list -->
     <section id="merch" class="merch">
